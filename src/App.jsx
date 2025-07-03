@@ -3,9 +3,15 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 
 const App = () => {
+  
+  const [theme, setTheme] = React.useState(
+    localStorage.getItem('theme') ? 
+    localStorage.getItem('theme') : 'light'
+  ); 
+
   return (
     <div>
-      <Navbar />
+      <Navbar theme={theme} setTheme={setTheme}/>
       <h1>Welcome to the Car Rental App</h1>
       <Footer />
       
