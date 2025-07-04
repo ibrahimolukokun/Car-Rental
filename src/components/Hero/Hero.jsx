@@ -19,7 +19,7 @@ const Hero = ({theme}) => {
                     />
                 </div>
                 {/* Hero Text */}
-                <div className='order-2 sm:order-1 space-y-5 sm:pr-32'>
+                <div className='order-2 sm:order-1 space-y-6 sm:pr-32'>
                     <p 
                     data-aos="fade-up"
                     className='text-primary text-2xl'>Effortless
@@ -38,7 +38,7 @@ const Hero = ({theme}) => {
                     <button 
                     data-aos="fade-up"
                     data-aos-duration="1500"
-                    className='mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-red-800 transition-colors duration-300 cursor-pointer'>
+                    className='button'>
                         Book Now
                     </button>
                 </div>

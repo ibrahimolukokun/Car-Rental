@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Hero from './components/Hero/Hero.jsx'
+import Services from './components/Services/Services.jsx'
+import About from './components/About/About.jsx'
+import CarList from './components/CarList/CarList.jsx'
+import Testimonial from './components/Testimonial/Testimonial.jsx'
+import Contact from './components/Contact/Contact.jsx'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -35,8 +40,12 @@ const App = () => {
   return (
     <div>
       <Navbar theme={theme} setTheme={setTheme}/>
-      <Hero theme={theme} />     
-      
+      <Hero theme={theme} />
+      <About />
+      <Services />
+      <CarList />   
+      <Testimonial />
+      <Contact />
       <Footer />
       
 

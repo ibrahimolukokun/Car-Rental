@@ -8,7 +8,7 @@
 @theme {
   /* === colours ============================= */
   --color-primary:     #DB1C30;   /* Yellow  */
-  --color-secondary:   #FF8760;   /* Orange */
+  --color-secondary:   #8B0000;   /* Orange */
   --color-accent:      #B96053;
   --color-background:  #F5FFFE;   /* Light gray */
   --color-dark:        #111111;   /* Near‑black */
@@ -31,3 +31,27 @@
   @variant xl  { padding-inline: 5rem; }
   @variant 2xl { padding-inline: 6rem; }
 }
+
+/* 5 — Base styles */
+@layer base {
+  .button {
+    @apply inline-block px-4 py-2 rounded-md text-white font-semibold;
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+  } 
+  .button-outline {
+    @apply inline-block px-4 py-2 rounded-md text-primary font-semibold;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .button-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    }
+  }
