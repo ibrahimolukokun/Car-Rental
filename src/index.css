@@ -1,1 +1,33 @@
+/* 1 — Load Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&display=swap");
+
+/* 2 — Tailwind’s core styles */
 @import "tailwindcss";
+
+/* 3 — Design Tokens  */
+@theme {
+  /* === colours ============================= */
+  --color-primary:     #DB1C30;   /* Yellow  */
+  --color-secondary:   #FF8760;   /* Orange */
+  --color-accent:      #B96053;
+  --color-background:  #F5FFFE;   /* Light gray */
+  --color-dark:        #111111;   /* Near‑black */
+
+  /* === typography ========================== */
+  --font-sans:  "Poppins", sans-serif;
+  --font-serif: "Merriweather", serif;
+}
+
+/* Dark‑mode overrides */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 4 — Utilities  */
+@utility container {
+  margin-inline: auto;   /* centre it */
+  padding-inline: 2rem;  /* DEFAULT   */
+
+  @variant sm  { padding-inline: 2rem; }
+  @variant lg  { padding-inline: 4rem; }
+  @variant xl  { padding-inline: 5rem; }
+  @variant 2xl { padding-inline: 6rem; }
+}

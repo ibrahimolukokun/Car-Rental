@@ -2,15 +2,16 @@ import React from 'react'
 import { BiSolidSun, BiSolidMoon } from 'react-icons/bi'
 
 const NavLinks= [
-  { iode: "1", name: 'HOME', href: '#' },
+  { id: "1", name: 'HOME', href: '#' },
   { id: "2", name: 'CARS', href: '#' },
   { id: "3", name: 'ABOUT', href: '#' },
   { id: "4", name: 'BOOKING', href: '#' },]
 
 const Navbar = ({theme, setTheme}) => {
+
   return (
-    <nav className='navbar shadow-sm bg-dark'>
-    <div className='container mx-auto px-4'> 
+    <nav className='shadow-md bg-white dark:bg-dark dark:text-white'>
+    <div className='container mx-auto '> 
         <div className='flex justify-between items-center py-4'>
             {/* Logo */}
             <div className='logo'>
@@ -23,7 +24,7 @@ const Navbar = ({theme, setTheme}) => {
                         NavLinks.map((link) => (
                             <li key={link.id}>
                                 <a href={link.href}
-                                    className='py-2 text-dark hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500 transition-colors duration-300'>
+                                    className='py-2 hover:text-primary hover:border-b-2 hover:border-primary transition-colors duration-300'>
                                     {link.name}
                                 </a>
                             </li>
@@ -35,9 +36,13 @@ const Navbar = ({theme, setTheme}) => {
             <div className='hidden md:block'>
                 {
                     theme === 'dark' ? (
-                        <BiSolidSun className='text-2xl'/>
+                        <BiSolidSun 
+                        onClick={() => setTheme('light')}
+                        className='text-2xl'/>
                     ):(
-                        <BiSolidMoon className='text-2xl'/>
+                        <BiSolidMoon 
+                        onClick={() => setTheme('dark')}
+                        className='text-2xl'/>
                     )
                 }
                 
