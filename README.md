@@ -4,7 +4,7 @@ A responsive landing page concept for a fictional car rental company. Includes c
 
 🔗 Live Demo
 
-[View Project](https://travelwisepro.vercel.app/)
+[View Project](https://car-rental-nu-wine.vercel.app/)
 
 
 🚀 Features
